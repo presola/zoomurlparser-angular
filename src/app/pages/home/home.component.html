@@ -1,6 +1,8 @@
 <div class="container">
   <div class="content">
     <p class="mat-error">{{errorMessage}}</p>
+    <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
     <form [formGroup]="urlForm" (ngSubmit)="submitForm()">
       <div class="form-control">
         <mat-form-field appearance="fill">

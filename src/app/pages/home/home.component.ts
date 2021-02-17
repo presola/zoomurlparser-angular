@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   public urlForm: FormGroup;
   public errorMessage: string;
   public zoomResponse: string;
+  public loading: boolean;
 
   constructor(private apiService: ApiService) {
     this.urlForm = new FormGroup({
@@ -24,13 +25,15 @@ export class HomeComponent implements OnInit {
 
   submitForm() {
     if (this.urlForm.valid) {
+      this.loading = true;
       this.apiService.getZoomDetails(this.urlForm.value.url).subscribe({
         next: data => {
           this.zoomResponse = JSON.stringify(data);
+          this.loading = false;
         },
         error: error => {
           this.errorMessage = error.message;
-          console.error('There was an error!', error);
+          this.loading = false;
         }
       });
     }
