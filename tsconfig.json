@@ -15,7 +15,29 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@apps": [
+        "src/app/*"
+      ],
+      "@data": [
+        "src/data/*"
+      ],
+      "@pages": [
+        "src/app/pages/*"
+      ],
+      "@components": [
+        "src/app/components/*"
+      ],
+      "@models": [
+        "src/app/models/*"
+      ],
+      "@services": [
+        "src/app/services/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false

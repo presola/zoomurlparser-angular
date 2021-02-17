@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="content">
+    <p class="mat-error">{{errorMessage}}</p>
+    <form [formGroup]="urlForm" (ngSubmit)="submitForm()">
+      <div class="form-control">
+        <mat-form-field appearance="fill">
+          <input matInput type="text" formControlName="url" placeholder="Zoom URL" type="url">
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary" [disabled]="!urlForm.valid">GO</button>
+
+      </div>
+    </form>
+    <div>
+      {{zoomResponse}}
+    </div>
+  </div>
+</div>
