@@ -1,4 +1,4 @@
 {
-  "url": "https://zoom-url.herokuapp.com/",
+  "url": "https://zoom-url.herokuapp.com",
   "parser": "/urlParser"
 }
